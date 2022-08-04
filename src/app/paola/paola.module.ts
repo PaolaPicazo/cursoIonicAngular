@@ -10,7 +10,8 @@ import { PaolaPage } from './paola.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PaolaPageRoutingModule
+    PaolaPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [PaolaPage]
 })

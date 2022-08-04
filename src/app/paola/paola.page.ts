@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//  import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-//  import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-paola',
@@ -8,16 +7,55 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paola.page.scss'],
 })
 
-
-
 export class PaolaPage implements OnInit {
 
-
-
-
  ngOnInit() {
-   }
+}
+operacion:string;
+resultado:Number;
+formulario:FormGroup =this.fb.group({
+  num1:[''],
+  num2:[''],
+  op:['']
 
+})
+constructor(private fb:FormBuilder){
+
+}
+guardar(){
+  // console.log(this.formulario.value.num1);
+  let numero1 = this.formulario.value.num1;
+  let numero1Parsed = Number(numero1);
+  let numero2= this.formulario.value.num2;
+  let numero2Parsed = Number(numero2);
+  let operacion = this.formulario.value.op;
+  this.resultado;
+  switch (operacion) {
+    case '+':
+      this.resultado = numero1Parsed + numero2Parsed;
+      console.log(this.resultado);
+      break;
+
+    case '-':
+      this.resultado = numero1Parsed - numero2Parsed;
+      console.log(this.resultado);
+      break;
+
+    case 'x':
+      this.resultado = numero1Parsed * numero2Parsed;
+      console.log(this.resultado);
+      break;
+
+    case '÷':
+      this.resultado = numero1Parsed / numero2Parsed;
+      console.log(this.resultado);
+      break;
+    default:
+      break;
+  }
+
+
+}
 
 
 }

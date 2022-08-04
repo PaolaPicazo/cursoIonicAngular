@@ -3,4 +3,23 @@
     <ion-title>Calculadora</ion-title>
   </ion-toolbar>
 </ion-header>
+<form (ngSubmit)="guardar()" [formGroup]="formulario" >
+  <input type="text" formControlName="num1">
+  <input type="text" formControlName="num2">
+  <ion-list>
+    <ion-item>
+      <ion-label>Calculadora</ion-label>
+      <ion-item>
+<ion-label>Operación</ion-label>
+<ion-select formControlName="op">
+  <ion-select-option>+</ion-select-option>
+  <ion-select-option>-</ion-select-option>
+  <ion-select-option>x</ion-select-option>
+  <ion-select-option>÷</ion-select-option>
+</ion-select>
+</ion-item>
+    </ion-item>
+  </ion-list>
+  <ion-button type="submit"> calcular </ion-button>
+</form>
 

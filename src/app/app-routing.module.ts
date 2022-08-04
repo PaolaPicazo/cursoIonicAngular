@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PaolaPageModule } from './paola/paola.module';
 
 const routes: Routes = [
   {
@@ -7,10 +8,16 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+
+    path: 'paola',
+    component: PaolaPageModule
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+
 ];
 
 @NgModule({
