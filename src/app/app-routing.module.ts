@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'paola',
+    loadChildren: () => import('./paola/paola.module').then( m => m.PaolaPageModule)
+  },
 ];
 
 @NgModule({

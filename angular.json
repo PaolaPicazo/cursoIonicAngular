@@ -146,10 +146,10 @@
     }
   },
   "cli": {
-    "analytics": "76467157-2c82-4541-99b8-088b4f066dd4",
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "9e6aec33-a743-44e4-bed1-4b4b81ec3a5d"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
